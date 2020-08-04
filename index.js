@@ -38,12 +38,10 @@ const paste = (currentTextBox) => {
   let sub = ""
   for (let i = 0; i < str.length; i++) {
     sub += str[i]
-    console.log("sub", sub, "boxID", boxId)
     document.getElementById(boxId).value = sub;
     if (sub.length === 4 && boxId !== 'card-4') {
       sub = ""
       boxId = 'card-' + (++k);
-      console.log(boxId, "boxId")
       moveCursorFront(boxId);
     }
     else if(boxId === "card-4"){
@@ -55,7 +53,6 @@ const paste = (currentTextBox) => {
 const moveCursor = (prevTextBox, currentTextBox, nextTextBox) => {
   const length = currentTextBox.value.length;
   const inputType = currentTextBox.getAttribute('class');
-  // console.log("inside moveCursor Func", prevTextBox, currentTextBox.getAttribute("id"), nextTextBox)
   if (inputType !== 'input') {
     maxLength = Number(currentTextBox.getAttribute('maxlength'));
   }
@@ -71,7 +68,6 @@ const moveCursor = (prevTextBox, currentTextBox, nextTextBox) => {
     }
     moveCursorFront(nextTextBox);
   }
-  console.log(maxLength, "maxLength")
 };
 
 const payClicked = () => {
