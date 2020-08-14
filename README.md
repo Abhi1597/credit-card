@@ -1,6 +1,6 @@
 # Credit-Card
 
-## Demo: https://abhi1597.github.io/credit-card/
+## Demo: https://dhwani-cred.netlify.app/
 
 ## Functonalities
 
